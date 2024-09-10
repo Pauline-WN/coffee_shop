@@ -84,8 +84,6 @@ Tests
 
 To run the tests, ensure you have `pytest` installed. Navigate to your project folder and run:
 
-bash
-
 Copy code
 
 `pytest`
@@ -103,7 +101,6 @@ Installation
 
 1.  **Clone the repository**:
 
-bash
 
 Copy code
 
@@ -111,7 +108,6 @@ Copy code
 
 1.  **Navigate into the project directory**:
 
-bash
 
 Copy code
 
@@ -119,7 +115,6 @@ Copy code
 
 1.  **Set up a virtual environment** (optional but recommended):
 
-bash
 
 Copy code
 
@@ -128,7 +123,6 @@ pipenv shell`
 
 1.  **Install pytest for testing**:
 
-bash
 
 Copy code
 
