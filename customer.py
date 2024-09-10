@@ -6,7 +6,7 @@ class Customer:
         self._orders = []  # To Store orders for this customer
 
     def place_order(self, coffee, price):
-        order = Order(self, coffee, price)
+        order = order(self, coffee, price)
         self._orders.append(order)
         return order
 
