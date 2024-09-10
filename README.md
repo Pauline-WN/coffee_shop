@@ -95,62 +95,61 @@ Methods:
 all(): Returns all orders.
 
 Tests
+-----
 
-Running Tests
+### Running Tests
 
-To run the tests, ensure you have pytest installed, then navigate to your project folder and run:
+To run the tests, ensure you have `pytest` installed. Navigate to your project folder and run:
 
 bash
 
 Copy code
 
-pytest
+`pytest`
 
-The test suite is organized in the tests/ directory with individual test files for the Customer, Coffee, and Order classes.
+The test suite is organized in the `tests/` directory with individual test files for the `Customer`, `Coffee`, and `Order` classes.
 
-Test Coverage
+### Test Coverage
 
-test_customer.py: Tests the creation of a customer, validation of name, and placing orders.
-
-test_coffee.py: Tests the creation of coffee and the name validation.
-
-test_order.py: Tests order creation, customer and coffee association, and price validation.
+-   **test_customer.py**: Tests customer creation, name validation, and placing orders.
+-   **test_coffee.py**: Tests coffee creation and name validation.
+-   **test_order.py**: Tests order creation, customer and coffee association, and price validation.
 
 Installation
+------------
 
-Clone the repository:
-
-bash
-
-Copy code
-
-git clone <git@github.com:Pauline-WN/coffee_shop.git>
-
-Navigate into the project directory:
+1.  **Clone the repository**:
 
 bash
 
 Copy code
 
-cd coffee_shop
+`git clone git@github.com:Pauline-WN/coffee_shop.git`
 
-Set up a virtual environment (optional but recommended):
-
-bash
-
-Copy code
-
-pipenv install
-
-pipenv shell
-
-Install pytest for testing:
+1.  **Navigate into the project directory**:
 
 bash
 
 Copy code
 
-pipenv install pytest
+`cd coffee_shop`
+
+1.  **Set up a virtual environment** (optional but recommended):
+
+bash
+
+Copy code
+
+`pipenv install
+pipenv shell`
+
+1.  **Install pytest for testing**:
+
+bash
+
+Copy code
+
+`pipenv install pytest`
 
 Debugging
 
