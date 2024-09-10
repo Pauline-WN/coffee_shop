@@ -1,98 +1,81 @@
 Coffee Shop Domain Modeling
+===========================
 
 Project Overview
+----------------
 
-This project models a simple coffee shop using Object-Oriented Programming (OOP) principles in Python. The domain consists of three main entities: Customer, Coffee, and Order. The relationships between these entities are modeled through classes and methods that allow for creating customers, placing orders, and associating those orders with coffees.
+This project models a simple coffee shop using Object-Oriented Programming (OOP) principles in Python. The domain consists of three main entities: `Customer`, `Coffee`, and `Order`. The relationships between these entities are modeled through classes and methods that allow for creating customers, placing orders, and associating those orders with coffees.
 
-The project also includes automated tests using pytest to ensure that the methods and object relationships work as expected.
+The project also includes automated tests using `pytest` to ensure that the methods and object relationships work as expected.
 
 Folder Structure
+----------------
 
 bash
 
 Copy code
 
-coffee_shop/
-
+`coffee_shop/
 │
-
-├── customer.py # Customer class implementation
-
-├── coffee.py # Coffee class implementation
-
-├── order.py # Order class implementation
-
+├── customer.py        # Customer class implementation
+├── coffee.py          # Coffee class implementation
+├── order.py           # Order class implementation
 │
-
-├── tests/ # Test files directory
-
-│ ├── test_customer.py # Unit tests for Customer class
-
-│ ├── test_coffee.py # Unit tests for Coffee class
-
-│ └── test_order.py # Unit tests for Order class
-
+├── tests/             # Test files directory
+│   ├── test_customer.py  # Unit tests for Customer class
+│   ├── test_coffee.py    # Unit tests for Coffee class
+│   └── test_order.py     # Unit tests for Order class
 │
-
-├── README.md # This README file
-
-├── LICENSE # License for the project
-
-└── debug.py # Optional script for quick debugging
+├── README.md          # This README file
+├── LICENSE            # License for the project
+└── debug.py           # Optional script for quick debugging`
 
 Classes and Relationships
+-------------------------
 
-Customer Class (customer.py)
+### Customer Class (`customer.py`)
 
-The Customer class models a customer in the coffee shop:
+The `Customer` class models a customer in the coffee shop.
 
-Attributes:
+**Attributes**:
 
-name: The name of the customer (1 to 15 characters).
+-   `name`: The name of the customer (1 to 15 characters).
+-   `_orders`: A private list to store the orders placed by the customer.
 
-_orders: A private list to store the orders placed by the customer.
+**Methods**:
 
-Methods:
+-   `place_order(coffee, price)`: Creates an order and associates it with the customer.
+-   `orders()`: Returns a list of the customer's orders.
+-   `coffees()`: Returns a unique list of coffees the customer has ordered.
 
-place_order(coffee, price): Creates an order and associates it with the customer.
+### Coffee Class (`coffee.py`)
 
-orders(): Returns a list of the customer's orders.
+The `Coffee` class models the coffee available in the shop.
 
-coffees(): Returns a unique list of coffees the customer has ordered.
+**Attributes**:
 
-Coffee Class (coffee.py)
+-   `name`: The name of the coffee (minimum 3 characters).
+-   `_orders`: A list to store orders associated with this coffee.
 
-The Coffee class models the coffee available in the shop:
+**Methods**:
 
-Attributes:
+-   `orders()`: Returns all orders for that coffee.
+-   `num_orders()`: Returns the total number of orders for that coffee.
+-   `average_price()`: Returns the average price of orders for the coffee.
 
-name: The name of the coffee (minimum 3 characters).
+### Order Class (`order.py`)
 
-_orders: A list to store orders associated with this coffee.
+The `Order` class models an individual order placed by a customer for a coffee.
 
-Methods:
+**Attributes**:
 
-orders(): Returns all orders for that coffee.
+-   `customer`: The `Customer` instance who placed the order.
+-   `coffee`: The `Coffee` instance that was ordered.
+-   `price`: The price of the order (between 1.0 and 10.0).
 
-num_orders(): Returns the total number of orders for that coffee.
+**Methods**:
 
-average_price(): Returns the average price of orders for the coffee.
-
-Order Class (order.py)
-
-The Order class models an individual order placed by a customer for a coffee:
-
-Attributes:
-
-customer: The Customer instance who placed the order.
-
-coffee: The Coffee instance that was ordered.
-
-price: The price of the order (between 1.0 and 10.0).
-
-Methods:
-
-all(): Returns all orders.
+-   `all()`: Returns all orders.
 
 Tests
 -----
@@ -152,9 +135,11 @@ Copy code
 `pipenv install pytest`
 
 Debugging
+---------
 
-For quick interactive testing, you can use the debug.py file. This file includes example code to create instances of Customer, Coffee, and Order to manually test the behavior of your classes.
+For quick interactive testing, you can use the `debug.py` file. This file includes example code to create instances of `Customer`, `Coffee`, and `Order` to manually test the behavior of your classes.
 
 License
+-------
 
-This project is open-source and available under the MIT License. See the LICENSE file for more details.
+This project is open-source and available under the MIT License. See the `LICENSE` file for more details.
